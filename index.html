@@ -1,16 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 
 <head>
-    <meta charset="utf-8">
-    <title>我的第一个网站</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HAI CITY</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background:
+                radial-gradient(circle at top,
+                    #1b2735,
+                    #090a0f);
+
+            overflow: hidden;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 80px;
+
+            letter-spacing: 10px;
+
+            margin-bottom: 20px;
+
+            text-shadow:
+                0 0 10px #00ffff,
+                0 0 20px #00ffff,
+                0 0 40px #00ffff;
+
+            animation: glow 2s infinite alternate;
+        }
+
+        p {
+            font-size: 22px;
+
+            color: #cccccc;
+
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 18px 50px;
+
+            font-size: 20px;
+
+            border: none;
+
+            border-radius: 50px;
+
+            background: linear-gradient(90deg,
+                    #00ffff,
+                    #0077ff);
+
+            color: white;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            box-shadow:
+                0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+
+            box-shadow:
+                0 0 40px rgba(0, 255, 255, 0.9);
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow:
+                    0 0 10px #00ffff,
+                    0 0 20px #00ffff;
+            }
+
+            to {
+                text-shadow:
+                    0 0 20px #00ffff,
+                    0 0 40px #00ffff,
+                    0 0 80px #00ffff;
+            }
+        }
+
+        .grid {
+            position: absolute;
+
+            width: 200%;
+            height: 200%;
+
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px,
+                    transparent 1px),
+                linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.05) 1px,
+                    transparent 1px);
+
+            background-size: 50px 50px;
+
+            transform: rotateX(75deg);
+
+            animation: moveGrid 20s linear infinite;
+        }
+
+        @keyframes moveGrid {
+            from {
+                transform:
+                    rotateX(75deg) translateY(0);
+            }
+
+            to {
+                transform:
+                    rotateX(75deg) translateY(50px);
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Hello World!</h1>
+    <div class="grid"></div>
 
-    <p>这是我第一个 GitHub 网站。</p>
+    <div class="container">
+
+        <h1>HAI CITY</h1>
+
+        <p>
+            Human · AI · Infrastructure
+        </p>
+
+        <button class="btn">
+            Enter System
+        </button>
+
+    </div>
 
 </body>
 
